@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFBB86FC</color>
+    <color name="colorPrimaryDark">#FF6200EE</color>
+    <color name="colorAccent">#FF3700B3</color>
+
+    <color name="colorOrange">#FDA102</color>
+    <color name="colorYellow">#FFEB3B</color>
+
+    <color name="orange">#FFA102</color>
+
+    <color name="darkOrange">#FF5722</color>
+    <color name="color_cyan">#009688</color>
+    <color name="shadow_color">#FFFFFFFF</color>
+
+</resources>
