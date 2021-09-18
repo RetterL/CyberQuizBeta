@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/background.xml" value="1.1" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/background.xml" value="0.75" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/background_box.xml" value="0.2203125" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/background_btt.xml" value="0.165234375" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/background_buttom.xml" value="0.165234375" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/enviar_bt.xml" value="0.2203125" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/ic_share.xml" value="0.2203125" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/textbox.xml" value="0.2203125" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/textbox2.xml" value="0.2203125" />
-        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_login.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_main.xml" value="0.13" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_signup.xml" value="0.142578125" />
       </map>
     </option>
   </component>

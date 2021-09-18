@@ -11,6 +11,7 @@
 
     <color name="darkOrange">#FF5722</color>
     <color name="color_cyan">#009688</color>
+    <color name="color_title">#0C0C0C</color>
     <color name="shadow_color">#FFFFFFFF</color>
 
 </resources>
