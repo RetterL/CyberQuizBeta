@@ -40,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
+                android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="CyberQuiz"
                 android:textAlignment="center"
@@ -61,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/colorOrange"
+                android:fontFamily="sans-serif-black"
                 android:text="Crear Cuenta"
                 android:textColor="#151313" />
 
@@ -70,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:backgroundTint="#BCFFEB3B"
+                android:fontFamily="sans-serif-black"
                 android:text="Jugar Como Invitado"
                 android:textColor="#201E1E" />
 
@@ -78,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginTop="120dp"
+                android:fontFamily="serif"
                 android:gravity="center"
                 android:text="al crear una cuenta aceptas nuestras politicas y condiciones"
                 android:textSize="14dp"
