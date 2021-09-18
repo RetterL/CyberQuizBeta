@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Inicio"
+        android:id="@+id/home"
+        android:icon="@drawable/home"/>
+
+    <item android:title="Puntuaciones"
+        android:id="@+id/score"
+        android:icon="@drawable/trophy"/>
+
+    <item android:title="Configuracion"
+        android:id="@+id/config"
+        android:icon="@drawable/home"/>
+
+    <item android:title="Perfil"
+        android:id="@+id/profile"
+        android:icon="@drawable/user"/>
+
+</menu>

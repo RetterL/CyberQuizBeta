@@ -4,10 +4,10 @@
     <color name="colorYellow">#FFEB3B</color>
     <color name="orange">#FFA102</color>
 
+    <color name="color_white">#FFFFFF</color>
     <color name="darkOrange">#FF5722</color>
     <color name="color_cyan">#009688</color>
-    <color name="color_title">#0C0C0C</color>
-
+    <color name="color_black">#0C0C0C</color>
     <color name="light_yellow">#DCC500</color>
 
 </resources>
