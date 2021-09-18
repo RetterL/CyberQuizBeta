@@ -86,4 +86,9 @@
         tools:layout_editor_absoluteX="188dp"
         tools:layout_editor_absoluteY="185dp" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="ma"
+        android:layout_height="match_parent"
+        app:menu="@menu/menu"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
