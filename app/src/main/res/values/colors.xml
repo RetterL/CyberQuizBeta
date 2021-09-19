@@ -9,5 +9,8 @@
     <color name="color_cyan">#009688</color>
     <color name="color_black">#0C0C0C</color>
     <color name="light_yellow">#DCC500</color>
+    <color name="color_red">#BA370E</color>
+    <color name="color_green">#48AE4C</color>
+
 
 </resources>
