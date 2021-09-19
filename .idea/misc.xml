@@ -11,6 +11,7 @@
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/button_3.xml" value="0.165234375" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/button_4.xml" value="0.165234375" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/enviar_bt.xml" value="0.2203125" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/ic_paypal.xml" value="0.165234375" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/ic_share.xml" value="0.2203125" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/ic_trophy.xml" value="0.165234375" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/drawable/ic_trophy_remix_by_monsterbraingames.xml" value="0.165234375" />
@@ -25,10 +26,13 @@
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_cyber2.xml" value="0.22" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_login.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_main_bta.xml" value="0.1328551912568306" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_result.xml" value="0.2" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/activity_signup.xml" value="0.25" />
-        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/fragment_billetera.xml" value="0.18" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/fragment_billetera.xml" value="0.25" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/fragment_puntuaciones.xml" value="0.21" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/item_category.xml" value="0.18" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/layout/row_puntuaciones.xml" value="0.5" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/menu/home_menu.xml" value="0.153125" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/menu/menu.xml" value="0.153125" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/CyberQuizBeta2/app/src/main/res/menu/menu2.xml" value="0.153125" />

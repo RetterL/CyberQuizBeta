@@ -13,6 +13,14 @@
         android:theme="@style/Theme.CyberQuizBeta2"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".beta_cosmos"
+            android:exported="true"
+            android:label="@string/title_activity_beta_cosmos" />
+        <activity
+            android:name=".Bottom_Beta"
+            android:exported="true"
+            android:label="@string/title_activity_bottom_beta" />
+        <activity
             android:name=".ResultActivity"
             android:exported="true" />
         <activity
