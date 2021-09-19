@@ -24,10 +24,13 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
 
         ArrayList<CategoryModel> categories = new ArrayList<>();
-        categories.add(new CategoryModel())
-        categories.add(new CategoryModel("","","",))
+        categories.add(new CategoryModel("","Matematicas",""));
+        categories.add(new CategoryModel("","Ciencia",""));
+        categories.add(new CategoryModel("","Historia",""));
+        categories.add(new CategoryModel("","Deportes",""));
+        categories.add(new CategoryModel("","Colombia",""));
 
-        CategoryAdapter adapter = new CategoryAdapter(this, )
+        CategoryAdapter adapter = new CategoryAdapter(this,categories);
 
 
         setContentView(R.layout.activity_main);
