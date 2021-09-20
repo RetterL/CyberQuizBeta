@@ -49,7 +49,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                 intent.putExtra("categoryId", model.getCategoryId());
                 context.startActivity(intent);
             }
-        }
+        });
 
 
     }

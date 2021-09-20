@@ -1,14 +1,14 @@
 package com.example.cyberquizbeta2;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.cyberquizbeta2.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         for (DocumentSnapshot snapshot : value.getDocuments()) {
                             CategoryModel model = snapshot.toObject(CategoryModel.class);
                             model.setCategoryId(snapshot.getId());
-                            categories.add(model)
+                            categories.add(model);
                         }
                         adapter.notifyDataSetChanged();
                     }

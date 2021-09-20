@@ -2,6 +2,8 @@ package com.example.cyberquizbeta2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -10,8 +12,14 @@ import android.widget.Toast;
 
 import com.example.cyberquizbeta2.databinding.ActivityCyberBinding;
 import com.example.cyberquizbeta2.databinding.ActivityCyberBinding;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.ConcurrentSkipListMap;
 
 public class CyberActivity extends AppCompatActivity {
 
@@ -21,6 +29,8 @@ public class CyberActivity extends AppCompatActivity {
     int index = 0;
     Pregunta question;
     CountDownTimer timer;
+    FirebaseFirestore database;
+    int correctAnswers = 0;
 
 
 
@@ -31,28 +41,52 @@ public class CyberActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cyber);
 
         questions = new ArrayList<>();
+        database = FirebaseFirestore.getInstance();
 
-        questions.add(new Pregunta("Quien fue Pitagoras?",
-                "Un profesor", "Un sicario", "Un astronauta", "Un matematico","Un matematico" ));
-        questions.add(new Pregunta("6341-2341",
-                "4000", "5701", "9851", "8274","4000" ));
-        questions.add(new Pregunta("",
-                "4000", "5701", "9851", "8274","4000" ));
-        questions.add(new Pregunta("6341-2341",
-                "4000", "5701", "9851", "8274","4000" ));
-        questions.add(new Pregunta("6341-2341",
-                "4000", "5701", "9851", "8274","4000" ));
+        final String categoryId = getIntent().getStringExtra("categoryId");
 
+        Random random = new Random();
+        final int rand = random.nextInt(12);
 
+        database.collection("categories")
+                .document(categoryId)
+                .collection("questions")
+                .whereGreaterThanOrEqualTo("index", rand)
+                .orderBy("index")
+                .limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                if(queryDocumentSnapshots.getDocuments().size() < 5) {
+                    database.collection("categories")
+                            .document(categoryId)
+                            .collection("questions")
+                            .whereLessThanOrEqualTo("index", rand)
+                            .orderBy("index")
+                            .limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                                Pregunta question = snapshot.toObject(Pregunta.class);
+                                questions.add(question);
 
+                        }
+                    };
+                }); else {
+                    for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                        Pregunta question = snapshot.toObject(Pregunta.class);
+                        questions.add(question);
 
+                    }
+                    setNextQuestion();
+                }
 
+            }
+        });
         resetTimer();
-        setNextQuestion();
 
-    }
+    });
 
-    void resetTimer() {
+    void resetTimer(); {
         timer = new CountDownTimer(25000, 1000) {
             @Override
             public void onTick(long l) {
@@ -98,6 +132,8 @@ public class CyberActivity extends AppCompatActivity {
     void checkAnswer(TextView textView){
         String selectedAnswer = textView.getText().toString();
         if(selectedAnswer.equals(question.getRespuesta())) {
+            correctAnswers++;
+        }
             textView.setBackground(getResources().getDrawable(R.drawable.option_right));
         } else {
             showAnswer();
@@ -130,10 +166,14 @@ public class CyberActivity extends AppCompatActivity {
 
             case R.id.avanzarBt:
                 reset();
-                if(index < questions.size()) {
+                if(index <= questions.size()) {
                     index++;
                     setNextQuestion();
                 } else {
+                    Intent intent = new Intent(CyberActivity.this, ResultActivity.class);
+                    intent.putExtra("correct", correctAnswers);
+                    intent.putExtra("total", questions.size());
+                    startActivity(intent);
                     Toast.makeText(this, "Quiz Terminado.", Toast.LENGTH_SHORT).show();
                 }
 
