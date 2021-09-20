@@ -44,7 +44,7 @@
                 android:gravity="center"
                 android:text="CyberQuiz"
                 android:textAlignment="center"
-                android:textColor="@color/color_title"
+                android:textColor="@color/color_black"
                 android:textSize="34sp"
                 android:textStyle="normal" />
 

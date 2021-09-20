@@ -1,6 +1,7 @@
 package com.example.cyberquizbeta2;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
@@ -11,12 +12,18 @@ import android.widget.Toast;
 
 import com.example.cyberquizbeta2.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    FirebaseFirestore database;
 
     BottomNavigationView bottom_navigation;
 
@@ -28,14 +35,27 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar2);
 
+        database = FirebaseFirestore.getInstance();
+
         ArrayList<CategoryModel> categories = new ArrayList<>();
-        categories.add(new CategoryModel("","Matematicas","https://cdn1.iconfinder.com/data/icons/banking-and-finance-2-4/128/89-512.png"));
-        categories.add(new CategoryModel("","Ciencia","https://cdn3.iconfinder.com/data/icons/education-and-knowledge-7/155/vector_338_16-512.png"));
-        categories.add(new CategoryModel("","Historia","https://cdn2.iconfinder.com/data/icons/ballicons-2-vol-2/100/castle-512.png"));
-        categories.add(new CategoryModel("","Deportes","https://cdn3.iconfinder.com/data/icons/education-science-vol-2-1/512/tennis_ball_sports_game-512.png"));
-        categories.add(new CategoryModel("","Colombia","https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Colombia_-_Circle-512.png"));
+
 
         CategoryAdapter adapter = new CategoryAdapter(this,categories);
+
+        database.collection("categories")
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                        categories.clear();
+                        for (DocumentSnapshot snapshot : value.getDocuments()) {
+                            CategoryModel model = snapshot.toObject(CategoryModel.class);
+                            model.setCategoryId(snapshot.getId());
+                            categories.add(model)
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+
         binding.categoryList.setLayoutManager(new GridLayoutManager(this,2));
         binding.categoryList.setAdapter(adapter);
 
